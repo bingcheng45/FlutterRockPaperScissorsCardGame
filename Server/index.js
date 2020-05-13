@@ -1,10 +1,11 @@
 var WebSocket = require('ws');
 
-var port = process.env.PORT || 5500;
+var port = process.env.PORT || 8091;
 
 var server = new WebSocket.Server(
   {
     port: port,
+    //host: 'localhost',
   }
 )
 

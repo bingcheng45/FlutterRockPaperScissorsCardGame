@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 // substitute your server's IP and port
-const YOUR_SERVER_IP = '192.168.1.110';
-const YOUR_SERVER_PORT = '5500';
+const YOUR_SERVER_IP = 'ce8ede95.ngrok.io'; 
+const YOUR_SERVER_PORT = '80';
 const URL = 'ws://$YOUR_SERVER_IP:$YOUR_SERVER_PORT';
 
 void main() => runApp(MyApp());
