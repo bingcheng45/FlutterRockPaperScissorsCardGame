@@ -13,11 +13,16 @@ let msg = "Server: Welcome!";
 
 server.on('connection', function connection(client) {
   client.send(msg);
+  console.log('someone is connected');
   client.on('message', function incoming(message) {
     msg = message;
-    for(var cl of server.clients) {
+    for (var cl of server.clients) {
       cl.send(message);
     }
     console.log("Received the following message:\n" + message);
+  });
+
+  client.on('close', function () {
+    console.log('we have lose a client');
   });
 });
