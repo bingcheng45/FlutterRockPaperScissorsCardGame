@@ -18,6 +18,7 @@ io.on('connection', (socket) => {
 	socket.on('adduser', function(username){
         // echo to client they've connected
         io.emit('test', 'you have connected to lobby');
+        console.log(username);
 		// store the username in the socket session for this client
 		socket.username = username;
 		// store the room name in the socket session for this client

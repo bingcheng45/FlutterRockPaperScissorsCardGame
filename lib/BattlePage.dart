@@ -48,7 +48,7 @@ class _BattlePageState extends State<BattlePage> {
 
     //connect socket
     socketIO.connect();
-    socketIO.sendMessage('adduser', 'test name');
+    
     print('connecting to server');
   }
 
@@ -92,7 +92,7 @@ class _BattlePageState extends State<BattlePage> {
   void initState() {
     super.initState();
     _connectSocket01();
-
+    socketIO.sendMessage('adduser', 'testname');
     //_sendmsg();
   }
 
